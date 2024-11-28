@@ -5,7 +5,7 @@
  * @typedef {import("typedoc").TypeDocOptions} TypeDocOptions
  */
 
-import {spawn} from "node:child_process"
+import {exec, spawn} from "node:child_process"
 import {Console as NodeConsole} from "node:console"
 import {mkdir, mkdtemp, writeFile, rm, rmdir} from "node:fs/promises"
 import {existsSync} from "node:fs"
@@ -13,9 +13,12 @@ import {tmpdir} from "node:os"
 import {join, relative} from "node:path"
 import {argv, cwd, env, stderr, stdout} from "node:process"
 import {fileURLToPath} from "node:url"
+import {promisify} from "node:util"
 import sade from "sade"
 import {Application, JSONOutput} from "typedoc"
 import pack from "./package.json" with {type: "json"}
+
+const ex = promisify(exec)
 
 /**
  * @typedef {Object} Config
@@ -143,6 +146,8 @@ async function build(opts) {
     if (!existsSync(sd)) {
       await mkdir(sd)
     }
+
+    await ex(`cd "${st}" && yarn install`)
 
     let o = await generateObject({
       entryPoints: [join(st, s.entryPoint)],
