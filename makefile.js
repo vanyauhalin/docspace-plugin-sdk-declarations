@@ -48,12 +48,12 @@ const config = {
     file: "meta.json"
   },
   sources: [
-    {
-      owner: "onlyoffice",
-      name: "docspace-sdk-js",
-      branch: "master",
-      entryPoint: "src/main.ts"
-    },
+    // {
+    //   owner: "onlyoffice",
+    //   name: "docspace-sdk-js",
+    //   branch: "master",
+    //   entryPoint: "src/main.ts"
+    // },
     {
       owner: "onlyoffice",
       name: "docspace-sdk-js",
