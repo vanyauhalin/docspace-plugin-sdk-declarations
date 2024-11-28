@@ -45,6 +45,7 @@ jobs:
 
     - name: Publish Declarations
       if: ${{!contains(steps.build.outputs.stdout, 'no updates')}}
+      working-directory: dist
       run: |
         un=$(git config --get user.name)
         ru="${{github.server_url}}/${{github.repository}}.git"
