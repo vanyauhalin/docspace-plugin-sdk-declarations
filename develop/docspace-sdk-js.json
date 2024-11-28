@@ -1,0 +1,794 @@
+{
+  "id": 0,
+  "name": "@onlyoffice/docspace-sdk-js",
+  "variant": "project",
+  "kind": 1,
+  "flags": {},
+  "children": [
+    {
+      "id": 1,
+      "name": "default",
+      "variant": "declaration",
+      "kind": 128,
+      "flags": {
+        "isPublic": true
+      },
+      "comment": {
+        "summary": [
+          {
+            "kind": "text",
+            "text": "The SDK class is responsible for managing multiple SDKInstance objects.\nIt provides a method to initialize instances with a given configuration."
+          }
+        ],
+        "blockTags": [
+          {
+            "tag": "@remarks",
+            "content": [
+              {
+                "kind": "text",
+                "text": "- If an instance with the same frameId already exists, it reinitializes that instance.\n- Otherwise, it creates a new instance, initializes it, and adds it to the instances list."
+              }
+            ]
+          },
+          {
+            "tag": "@example",
+            "content": [
+              {
+                "kind": "code",
+                "text": "```typescript\nconst sdk = new SDK();\nconst config = { frameId: 'frame1', ...otherConfig };\nconst instance = sdk.init(config);\n```"
+              }
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": 2,
+          "name": "constructor",
+          "variant": "declaration",
+          "kind": 512,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 3,
+              "name": "new default",
+              "variant": "signature",
+              "kind": 16384,
+              "flags": {},
+              "type": {
+                "type": "reference",
+                "target": 1,
+                "name": "default",
+                "package": "@onlyoffice/docspace-sdk-js"
+              }
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "frames",
+          "variant": "declaration",
+          "kind": 1024,
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "sdk/index.ts",
+              "line": 40,
+              "character": 2,
+              "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L40"
+            }
+          ],
+          "type": {
+            "type": "reflection",
+            "declaration": {
+              "id": 6,
+              "name": "__type",
+              "variant": "declaration",
+              "kind": 65536,
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "sdk/index.ts",
+                  "line": 40,
+                  "character": 11,
+                  "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L40"
+                }
+              ]
+            }
+          },
+          "defaultValue": "{}"
+        },
+        {
+          "id": 4,
+          "name": "instances",
+          "variant": "declaration",
+          "kind": 1024,
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "sdk/index.ts",
+              "line": 39,
+              "character": 2,
+              "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L39"
+            }
+          ],
+          "type": {
+            "type": "array",
+            "elementType": {
+              "type": "reference",
+              "target": {
+                "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/instance/index.ts",
+                "qualifiedName": "default"
+              },
+              "name": "default",
+              "package": "@onlyoffice/docspace-sdk-js"
+            }
+          },
+          "defaultValue": "[]"
+        },
+        {
+          "id": 7,
+          "name": "init",
+          "variant": "declaration",
+          "kind": 2048,
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "sdk/index.ts",
+              "line": 50,
+              "character": 2,
+              "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L50"
+            }
+          ],
+          "signatures": [
+            {
+              "id": 8,
+              "name": "init",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Initializes an SDK instance with the provided configuration.\nIf an instance with the same frameId already exists, it reinitializes that instance.\nOtherwise, it creates a new instance, initializes it, and adds it to the instances list."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@returns",
+                    "content": [
+                      {
+                        "kind": "text",
+                        "text": "The initialized SDK instance."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "fileName": "sdk/index.ts",
+                  "line": 50,
+                  "character": 9,
+                  "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L50"
+                }
+              ],
+              "parameters": [
+                {
+                  "id": 9,
+                  "name": "config",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "comment": {
+                    "summary": [
+                      {
+                        "kind": "text",
+                        "text": "The configuration object for the SDK instance."
+                      }
+                    ]
+                  },
+                  "type": {
+                    "type": "reference",
+                    "target": {
+                      "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/types/index.ts",
+                      "qualifiedName": "TFrameConfig"
+                    },
+                    "name": "TFrameConfig",
+                    "package": "@onlyoffice/docspace-sdk-js"
+                  }
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "target": {
+                  "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/instance/index.ts",
+                  "qualifiedName": "default"
+                },
+                "name": "default",
+                "package": "@onlyoffice/docspace-sdk-js"
+              }
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "initEditor",
+          "variant": "declaration",
+          "kind": 2048,
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "sdk/index.ts",
+              "line": 77,
+              "character": 2,
+              "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L77"
+            }
+          ],
+          "signatures": [
+            {
+              "id": 20,
+              "name": "initEditor",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "sdk/index.ts",
+                  "line": 77,
+                  "character": 15,
+                  "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L77"
+                }
+              ],
+              "parameters": [
+                {
+                  "id": 21,
+                  "name": "config",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "target": {
+                      "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/types/index.ts",
+                      "qualifiedName": "TFrameConfig"
+                    },
+                    "name": "TFrameConfig",
+                    "package": "@onlyoffice/docspace-sdk-js"
+                  }
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "target": {
+                  "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/instance/index.ts",
+                  "qualifiedName": "default"
+                },
+                "name": "default",
+                "package": "@onlyoffice/docspace-sdk-js"
+              }
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "initFileSelector",
+          "variant": "declaration",
+          "kind": 2048,
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "sdk/index.ts",
+              "line": 83,
+              "character": 2,
+              "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L83"
+            }
+          ],
+          "signatures": [
+            {
+              "id": 26,
+              "name": "initFileSelector",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "sdk/index.ts",
+                  "line": 83,
+                  "character": 21,
+                  "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L83"
+                }
+              ],
+              "parameters": [
+                {
+                  "id": 27,
+                  "name": "config",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "target": {
+                      "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/types/index.ts",
+                      "qualifiedName": "TFrameConfig"
+                    },
+                    "name": "TFrameConfig",
+                    "package": "@onlyoffice/docspace-sdk-js"
+                  }
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "target": {
+                  "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/instance/index.ts",
+                  "qualifiedName": "default"
+                },
+                "name": "default",
+                "package": "@onlyoffice/docspace-sdk-js"
+              }
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "initFrame",
+          "variant": "declaration",
+          "kind": 2048,
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "sdk/index.ts",
+              "line": 69,
+              "character": 2,
+              "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L69"
+            }
+          ],
+          "signatures": [
+            {
+              "id": 11,
+              "name": "initFrame",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "sdk/index.ts",
+                  "line": 69,
+                  "character": 14,
+                  "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L69"
+                }
+              ],
+              "parameters": [
+                {
+                  "id": 12,
+                  "name": "config",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "target": {
+                      "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/types/index.ts",
+                      "qualifiedName": "TFrameConfig"
+                    },
+                    "name": "TFrameConfig",
+                    "package": "@onlyoffice/docspace-sdk-js"
+                  }
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "target": {
+                  "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/instance/index.ts",
+                  "qualifiedName": "default"
+                },
+                "name": "default",
+                "package": "@onlyoffice/docspace-sdk-js"
+              }
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "initManager",
+          "variant": "declaration",
+          "kind": 2048,
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "sdk/index.ts",
+              "line": 71,
+              "character": 2,
+              "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L71"
+            }
+          ],
+          "signatures": [
+            {
+              "id": 14,
+              "name": "initManager",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "sdk/index.ts",
+                  "line": 71,
+                  "character": 16,
+                  "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L71"
+                }
+              ],
+              "parameters": [
+                {
+                  "id": 15,
+                  "name": "config",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "target": {
+                      "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/types/index.ts",
+                      "qualifiedName": "TFrameConfig"
+                    },
+                    "name": "TFrameConfig",
+                    "package": "@onlyoffice/docspace-sdk-js"
+                  }
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "target": {
+                  "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/instance/index.ts",
+                  "qualifiedName": "default"
+                },
+                "name": "default",
+                "package": "@onlyoffice/docspace-sdk-js"
+              }
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "initRoomSelector",
+          "variant": "declaration",
+          "kind": 2048,
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "sdk/index.ts",
+              "line": 80,
+              "character": 2,
+              "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L80"
+            }
+          ],
+          "signatures": [
+            {
+              "id": 23,
+              "name": "initRoomSelector",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "sdk/index.ts",
+                  "line": 80,
+                  "character": 21,
+                  "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L80"
+                }
+              ],
+              "parameters": [
+                {
+                  "id": 24,
+                  "name": "config",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "target": {
+                      "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/types/index.ts",
+                      "qualifiedName": "TFrameConfig"
+                    },
+                    "name": "TFrameConfig",
+                    "package": "@onlyoffice/docspace-sdk-js"
+                  }
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "target": {
+                  "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/instance/index.ts",
+                  "qualifiedName": "default"
+                },
+                "name": "default",
+                "package": "@onlyoffice/docspace-sdk-js"
+              }
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "initSystem",
+          "variant": "declaration",
+          "kind": 2048,
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "sdk/index.ts",
+              "line": 86,
+              "character": 2,
+              "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L86"
+            }
+          ],
+          "signatures": [
+            {
+              "id": 29,
+              "name": "initSystem",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "sdk/index.ts",
+                  "line": 86,
+                  "character": 15,
+                  "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L86"
+                }
+              ],
+              "parameters": [
+                {
+                  "id": 30,
+                  "name": "config",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "target": {
+                      "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/types/index.ts",
+                      "qualifiedName": "TFrameConfig"
+                    },
+                    "name": "TFrameConfig",
+                    "package": "@onlyoffice/docspace-sdk-js"
+                  }
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "target": {
+                  "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/instance/index.ts",
+                  "qualifiedName": "default"
+                },
+                "name": "default",
+                "package": "@onlyoffice/docspace-sdk-js"
+              }
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "initViewer",
+          "variant": "declaration",
+          "kind": 2048,
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "sdk/index.ts",
+              "line": 74,
+              "character": 2,
+              "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L74"
+            }
+          ],
+          "signatures": [
+            {
+              "id": 17,
+              "name": "initViewer",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "sdk/index.ts",
+                  "line": 74,
+                  "character": 15,
+                  "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L74"
+                }
+              ],
+              "parameters": [
+                {
+                  "id": 18,
+                  "name": "config",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "target": {
+                      "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/types/index.ts",
+                      "qualifiedName": "TFrameConfig"
+                    },
+                    "name": "TFrameConfig",
+                    "package": "@onlyoffice/docspace-sdk-js"
+                  }
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "target": {
+                  "sourceFileName": "../../../../../tmp/docspace-plugin-sdk-declarations-XXXXXXulVRKe/develop/src/instance/index.ts",
+                  "qualifiedName": "default"
+                },
+                "name": "default",
+                "package": "@onlyoffice/docspace-sdk-js"
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Constructors",
+          "children": [
+            2
+          ]
+        },
+        {
+          "title": "Properties",
+          "children": [
+            5,
+            4
+          ]
+        },
+        {
+          "title": "Methods",
+          "children": [
+            7,
+            19,
+            25,
+            10,
+            13,
+            22,
+            28,
+            16
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "sdk/index.ts",
+          "line": 38,
+          "character": 21,
+          "url": "https://github.com/onlyoffice/docspace-sdk-js/blob/cd212a1ab91c4690c9de88a1fb4c87d601b88286/src/sdk/index.ts#L38"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "title": "Classes",
+      "children": [
+        1
+      ]
+    }
+  ],
+  "packageName": "@onlyoffice/docspace-sdk-js",
+  "symbolIdMap": {
+    "0": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/main.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": ""
+    },
+    "1": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default"
+    },
+    "4": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.instances"
+    },
+    "5": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.frames"
+    },
+    "6": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "__object"
+    },
+    "7": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.init"
+    },
+    "8": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.init"
+    },
+    "9": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "config"
+    },
+    "10": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initFrame"
+    },
+    "11": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initFrame"
+    },
+    "12": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "config"
+    },
+    "13": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initManager"
+    },
+    "14": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initManager"
+    },
+    "15": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "config"
+    },
+    "16": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initViewer"
+    },
+    "17": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initViewer"
+    },
+    "18": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "config"
+    },
+    "19": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initEditor"
+    },
+    "20": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initEditor"
+    },
+    "21": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "config"
+    },
+    "22": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initRoomSelector"
+    },
+    "23": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initRoomSelector"
+    },
+    "24": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "config"
+    },
+    "25": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initFileSelector"
+    },
+    "26": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initFileSelector"
+    },
+    "27": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "config"
+    },
+    "28": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initSystem"
+    },
+    "29": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "default.initSystem"
+    },
+    "30": {
+      "sourceFileName": "https://api.github.com/repos/onlyoffice/docspace-sdk-js/contents/src/sdk/index.ts?ref=cd212a1ab91c4690c9de88a1fb4c87d601b88286",
+      "qualifiedName": "config"
+    }
+  }
+}
