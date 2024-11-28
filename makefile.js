@@ -42,23 +42,23 @@ import pack from "./package.json" with {type: "json"}
 /** @type {Config} */
 const config = {
   meta: {
-    owner: "onlyoffice",
-    name: "docspace-plugin-sdk-declarations",
+    owner: "vanyauhalin",
+    name: "docspace-sdk-js",
     branch: "dist",
     file: "meta.json"
   },
   sources: [
     {
       owner: "onlyoffice",
-      name: "docspace-plugin-sdk",
+      name: "docspace-sdk-js",
       branch: "master",
-      entryPoint: "src/index.ts"
+      entryPoint: "src/main.ts"
     },
     {
       owner: "onlyoffice",
-      name: "docspace-plugin-sdk",
+      name: "docspace-sdk-js",
       branch: "develop",
-      entryPoint: "src/index.ts"
+      entryPoint: "src/main.ts"
     }
   ]
 }
